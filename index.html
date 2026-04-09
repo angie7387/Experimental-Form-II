@@ -83,12 +83,12 @@ h4 {
             opacity: 0.6;
             animation: drift 10s infinite alternate ease-in-out;
             filter: blur(7px);
+            transition: filter 0.5s;
         }
 
         .float:hover {
             filter: blur(0);
             opacity: 1;
-            animation: ;
         }
 
         @keyframes drift {
@@ -230,10 +230,14 @@ h4 {
 .square-1:hover ~ .ab {
     filter: blur(0);
     opacity: 1;
+             transition: filter 0.5s;
+
 }
 
 .ab:hover ~ .where-info {
     display: block;
+                    transition: opacity 1s;
+
 }
 
 .ab {
@@ -245,10 +249,14 @@ h4 {
 .square-2:hover ~ .cd {
     filter: blur(0);
     opacity: 1;
+                transition: filter 0.5s;
+
 }
 
 .cd:hover ~ .what-info {
     display: block;
+                transition: opacity 1s;
+
 }
 
 .cd {
@@ -260,10 +268,14 @@ h4 {
 .square-3:hover ~ .ef {
     filter: blur(0);
     opacity: 1;
+                transition: filter 0.5s;
+
 }
 
 .ef:hover ~ .when-info {
     display: block;
+                transition: opacity 0.5s;
+
 }
 
 .ef {
@@ -275,10 +287,14 @@ h4 {
 .square-4:hover ~ .gh {
     filter: blur(0);
     opacity: 1;
+                    transition: filter 0.5s;
+
 }
 
 .gh:hover ~ .who-info {
     display: block;
+                    transition: opacity 0.5s;
+
 }
 
 .gh:hover ~ header {
