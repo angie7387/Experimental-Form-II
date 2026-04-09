@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCAD U FAS Faculty Research Talks</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ciq6cpk.css">
+    <style>
+        body {
+            background-color: black;
+            font-family: "loretta", serif;
+            font-weight: 400;
+            font-style: normal;
+            margin: 0;
+                        font-size: 16px;
+                            overflow: hidden;
+
+
+        }
+
+        .glow {
+            position: absolute;
+    left: 10%;
+    bottom: 0%;
+    width: 2000px;
+    height: 2000px;
+    background: radial-gradient(ellipse, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+}
+
+        header {
+            height: 32px;
+            width: 100%;
+            position: fixed;
+            top: 50%;
+            left: 0;
+            z-index: 100;
+            font-size: 14px;
+            color: white;
+            text-align: center;
+            display: block;
+        }
+a {
+    color: white;
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 14px;
+    font-family: "loretta", serif;
+        font-weight: 600;
+
+font-style: normal;
+    margin: 0%;
+}
+h2 {
+    font-size: 14px;
+    font-family: "loretta", serif;
+    font-weight: 400;
+    font-style: normal;
+margin: 0%;}
+
+h3 {
+    font-size: 12px;
+    font-family: "loretta", serif;
+    font-weight: 400;
+    font-style: normal;
+margin: 0%;
+line-height: 1.5;
+}
+h4 {
+    font-size: 12px;
+    font-family: "loretta", serif;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+}
+
+
+        .float {
+            position: absolute;
+            color: white;
+            font-size: 14px;
+            opacity: 0.6;
+            animation: drift 10s infinite alternate ease-in-out;
+            filter: blur(7px);
+        }
+
+        .float:hover {
+            filter: blur(0);
+            opacity: 1;
+            animation: ;
+        }
+
+        @keyframes drift {
+            from { transform: translate(0px, 0px); }
+            to { transform: translate(var(--x), var(--y)); }
+        }
+
+        .where-info {
+            position: absolute;
+            background: rgb(255, 255, 255, 0.25);
+            height: 50px;
+            width: 50%;
+            bottom: 5%;
+            left: 25%;
+            padding: 3%;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            display: none;
+        }
+
+                .what-info {
+            position: absolute;
+            background: rgb(255, 255, 255, 0.25);
+            height: 50px;
+            width: 50%;
+            bottom: 5%;
+            left: 25%;
+            padding: 3%;
+            color: white;
+            align-items: center;
+            justify-content: center;
+                        display: none;
+
+        }
+
+                .when-info {
+            position: absolute;
+            background: rgb(255, 255, 255, 0.25);
+            height: 50px;
+            width: 50%;
+            bottom: 5%;
+            left: 25%;
+            padding: 3%;
+            color: white;
+            align-items: center;
+            justify-content: center;
+                                    display: none;
+
+
+        }
+
+                        .who-info {
+            position: absolute;
+            background: rgb(255, 255, 255, 0.25);
+            height: 800px;
+            width: 50%;
+            bottom: 5%;
+            left: 25%;
+            padding: 3%;
+            padding-top: 2%;
+            color: white;
+            align-items: center;
+            justify-content: center;
+                                    display: none;
+
+                                    z-index: 2;
+
+        }
+
+
+
+
+                .square-1 {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: white;
+            transition: .3s;
+            align-items: center;
+            justify-content: center;
+            color: white;
+             top:120px; 
+            left:200px;           
+        }
+
+                        .square-2 {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: white;
+            transition: .3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            top:300px; 
+            left:80%;         
+        }
+
+
+                                .square-3 {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: white;
+            transition: .3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            top:800px; 
+            left:1600px;         
+        }
+
+                                .square-4 {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: white;
+            transition: .3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            top:700px; 
+            left:100px;         
+        }
+
+            .square-1:hover, .square-2:hover, .square-3:hover, .square-4:hover {
+          background: rgb(255, 255, 255, 0.25);
+                      border-radius: 50%;
+        }
+/* square 1: Where */
+.square-1:hover ~ .a,
+.square-1:hover ~ .ab {
+    filter: blur(0);
+    opacity: 1;
+}
+
+.ab:hover ~ .where-info {
+    display: block;
+}
+
+.ab {
+   /*  font-size: 100px;*/
+}
+
+/* square 2: What */
+.square-2:hover ~ .c,
+.square-2:hover ~ .cd {
+    filter: blur(0);
+    opacity: 1;
+}
+
+.cd:hover ~ .what-info {
+    display: block;
+}
+
+.cd {
+   /*  font-size: 100px;*/
+}
+
+/* square 3: When */
+.square-3:hover ~ .e,
+.square-3:hover ~ .ef {
+    filter: blur(0);
+    opacity: 1;
+}
+
+.ef:hover ~ .when-info {
+    display: block;
+}
+
+.ef {
+   /*  font-size: 100px;*/
+}
+
+/* square 4: Who */
+.square-4:hover ~ .g,
+.square-4:hover ~ .gh {
+    filter: blur(0);
+    opacity: 1;
+}
+
+.gh:hover ~ .who-info {
+    display: block;
+}
+
+.gh:hover ~ header {
+    display: none;
+}
+
+.gh {
+   /*  font-size: 100px;*/
+}
+
+.square-4:hover ~ .g {
+        color: rgb(255, 255, 255, 0.35);
+}
+
+.square-3:hover ~ .e {
+        color: rgb(255, 255, 255, 0.35);
+}
+
+.square-2:hover ~ .c {
+        color: rgb(255, 255, 255, 0.35);
+}
+
+.square-1:hover ~ .a {
+        color: rgb(255, 255, 255, 0.35);
+}
+
+
+/*
+.a {
+    color: rgb(255, 255, 255, 0.25);
+}
+.c {
+    color: rgb(255, 255, 255, 0.25);
+}
+.e {
+    color: rgb(255, 255, 255, 0.25);
+}*/
+
+.g:hover {
+            color: rgb(255, 255, 255, 0.25);
+
+}
+
+.e:hover {
+            color: rgb(255, 255, 255, 0.25);   }
+
+.c:hover {
+            color: rgb(255, 255, 255, 0.25);}
+
+.a:hover {
+            color: rgb(255, 255, 255, 0.25);}
+
+    </style>
+</head>
+
+<body>
+    <div class="glow"></div>
+<div class="square-1"></div>
+<div class="square-2"></div>
+<div class="square-3"></div>
+<div class="square-4"></div>
+
+
+    <div class="float a">Where?</div>
+    <div class="float c">What?</div>
+    <div class="float e">When?</div>
+    <div class="float gh">Who?</div>
+        <header>OCAD U FAS Faculty Research Talks</header>
+
+
+
+<div class="float a">Where?</div>
+<div class="float c">What?</div>
+<div class="float e">When?</div>
+<div class="float g">Who?</div>
+
+<div class="float ab">Where?</div>
+<div class="float c">What?</div>
+<div class="float ef">When?</div>
+<div class="float g">Who?</div>
+
+<div class="float a">Where?</div>
+<div class="float c">What?</div>
+<div class="float e">When?</div>
+<div class="float g">Who?</div>
+
+<div class="float a">Where?</div>
+<div class="float c">What?</div>
+<div class="float e">When?</div>
+<div class="float g">Who?</div>
+
+<div class="float a">Where?</div>
+<div class="float c">What?</div>
+<div class="float e">When?</div>
+<div class="float g">Who?</div>
+
+<div class="float a">Where?</div>
+<div class="float cd">What?</div>
+<div class="float e">When?</div>
+<div class="float g">Who?</div>
+
+    <div class="where-info b">
+        Main Building & Rosalie Sharp Centre for Design (MCA)
+        <br><h2>100 McCaul Street</h2><h3>Room 543</h3>
+    </div>
+        <div class="what-info">
+Faculty of Arts and Science faculty members Vanessa Dion Fletcher, Kelsey Pugh, and Anna Stielau discuss their current
+research and creative practices.
+        </div>
+
+                <div class="when-info">
+            March 24, 2026
+            <br>3:30 - 4:30 p.m.
+                </div>
+
+<div class="who-info">
+<div>
+    <div>
+    <h1>Vanessa Dion Fletcher</h1>
+<h4>Bio</h4>
+Vanessa Dion Fletcher is a Lenape and Potawatomi neurodiverse Artist. Her family is from Eelūnaapèewii
+                        Lahkèewiitt (displaced from Lenapehoking) and European settlers. She Employs porcupine quills, Wampum belts,
+                        and menstrual blood, to reveal the complexities of what defines a body physically and culturally. Reflecting
+                        on an Indigenous and gendered body with a neurodiverse mind, Dion Fletcher creates art using composite
+                        media, primarily working in performance, textiles and video.
+                        She graduated from The School of the Art Institute of Chicago in 2016 with an MFA in performance at York
+                        University in 2009 with a Bachelor of Fine Arts. She has exhibited across Canada and the USA at Art Mur
+                        Montreal, Eastern Edge Gallery Newfoundland, The Queer Arts Festival Vancouver and the Satellite Art show in
+                        Miami. Her work is in the Indigenous Art Centre, Joan Flasch Artist Book Collection, Vtape, Seneca College,
+                        and the Archives of American Art.</div>
+                        <br>
+
+                    <h4>Talk: BIG Doll || Xwat Naaniitus</h4>
+BIG Doll || Xwat Naaniitus is an exhibition that shows the process of making and creating from the heart, not
+                        the head. This exhibition is both profoundly personal and collaborative, open to audiences of all ages to
+                        participate in the design of an artwork. Vanessa will share the research, process, and audience programming
+                        that supports this solo exhibition at Art Windsor Essex Nov. 20 - May 24, 2026.<br>
+</div>
+<br>
+<hr>
+<br>
+<div>
+<h1>Kelsey Pugh</h1>
+<h4>Bio</h4>
+Kelsey Pugh is a paleoanthropologist studying ape and human evolution from the fossil record. She uses a range of methods including comparative anatomy, phylogenetics, and 3D geometric morphometrics in her research to address questions such as “what is the nature of the last common ancestor of apes and humans?". She graduated from the City University of New York in 2020 with a PhD in Biological Anthropology.</div>
+<br><div>
+   <h4>Talk: Reconstructing Ancient Faces</h4>
+Relatively complete fossils of hominoids (apes and humans) are rare discoveries, and those that are known have often been subject to taphonomic process that distort and damage features. Damage complicates interpretations by paleoanthropologists but can sometimes be corrected through reconstruction. The virtual reconstruction of the 12-million-year-old ape Pierolapithecus will be used as an example of the utility of these methods, as well as some new research on old faces.
+</div>
+<br>
+<hr>
+<br>
+<div>
+<h1>Anna Stielau</h1>
+<h4>Bio</h4>
+
+<div>Anna Stielau is an assistant professor of art history and visual culture at OCADu. She received her PhD from NYU’s Department of Media, Culture, and Communication, and previously served as the Weisman Postdoctoral Teaching Fellow in Visual Culture at Caltech. Her research explores how contemporary African artists use media and technology to imagine the world, otherwise.</div>
+<br>
+  <div><h4>Talk: Arts of Darkness: Rethinking Photography from South Africa</h4>
+Photography is an infrastructural art. It needs light, power, and water. But in South Africa, where rolling blackouts and water shortages are routine, those resources can’t be taken for granted. Anna will share new work exploring how artists are working within - and thinking through - these constraints, redirecting attention from images to the underlying systems that make them possible.</div>
+</div>
+    <script>
+        const words = document.querySelectorAll(".float");
+//
+        words.forEach(word => {
+            word.style.left = Math.random() * window.innerWidth + "px";
+            word.style.top = Math.random() * window.innerHeight + "px";
+
+            const x = (Math.random() - 0.5) * 200 + "px";
+            const y = (Math.random() - 0.5) * 200 + "px";
+
+            word.style.setProperty("--x", x);
+            word.style.setProperty("--y", y);
+//
+            word.style.animationDuration = (3 + Math.random() * 10) + "s";
+        });
+    </script>
+</body>
+</html>
